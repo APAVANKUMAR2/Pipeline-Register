@@ -2,17 +2,17 @@ module tb_pipeline_reg;
     parameter DATA_WIDTH = 8;
     parameter CLK_PERIOD = 10;
 
-    logic             clk;
-    logic             rst_n;
+    logic clk;
+    logic rst_n;
     
     // Input interface
-    logic             in_valid;
-    wire              in_ready;
+    logic in_valid;
+    wire  in_ready;
     logic [DATA_WIDTH-1:0] in_data;
     
     // Output interface
-    wire              out_valid;
-    logic             out_ready;
+    wire out_valid;
+    logic out_ready;
     wire [DATA_WIDTH-1:0] out_data;
 
     // DUT
@@ -108,3 +108,4 @@ module tb_pipeline_reg;
 
 endmodule
   
+
