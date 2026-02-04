@@ -1,17 +1,17 @@
 module pipeline_reg #(
     parameter DATA_WIDTH = 8
 )(
-    input  logic             clk,
-    input  logic             rst_n,
+    input  logic clk,
+    input  logic rst_n,
     
     // Input interface
-    input  logic             in_valid,
-    output logic             in_ready,
+    input  logic in_valid,
+    output logic in_ready,
     input  logic [DATA_WIDTH-1:0] in_data,
     
     // Output interface
-    output logic             out_valid,
-    input  logic             out_ready,
+    output logic out_valid,
+    input  logic out_ready,
     output logic [DATA_WIDTH-1:0] out_data
 );
 
@@ -44,4 +44,5 @@ module pipeline_reg #(
     assign out_data  = stored_data;
 
 endmodule
+
 
